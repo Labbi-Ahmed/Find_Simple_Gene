@@ -23,4 +23,58 @@ public class FindAGeneSequence
         }
         return "";
     }
+    
+    public void testSimpleGene(){
+        String DNA , sub_string; 
+        DNA = "TAGCTATTCTGCCGAATC"; // gene sequence without ATG
+        System.out.println("DNA strand is " + DNA);
+        sub_string = findSimpleGene(DNA);
+        if(sub_string.length() != 0){
+            System.out.println("Gene is : " + sub_string);
+        }
+        else{
+            System.out.println("Gene is : Invalid sequence");
+        }
+        
+        DNA = "TCGTAGGCATAATGCCGA"; // gene sequence without ATG
+        System.out.println("DNA strand is " + DNA);
+        sub_string = findSimpleGene(DNA);
+        if(sub_string.length() != 0){
+            System.out.println("Gene is : " + sub_string);
+        }
+        else{
+            System.out.println("Gene is : Invalid sequence");
+        }
+        
+        DNA = "TACATGTCCAGGTGGGTCTGC";                         // gene sequence with ATG and without TAA
+        System.out.println("DNA strand is " + DNA);
+        sub_string = findSimpleGene(DNA);
+        if(sub_string.length() != 0){
+            System.out.println("Gene is : " + sub_string);
+        }
+        else{
+            System.out.println("Gene is : Invalid sequence");
+        }
+        
+        DNA = "TACATGTCCAGGTGGGTCTGCTAA";                     /// gene sequence with ATG , TAA and sub_string is multiple of 3   
+        System.out.println("DNA strand is " + DNA);
+        sub_string = findSimpleGene(DNA);
+        if(sub_string.length() != 0){
+             System.out.println("Gene is : " + sub_string);
+        }
+        else{
+            System.out.println("Gene is : Invalid sequence");
+        }
+        
+        DNA = "TACATGTCCAGGTGGGTCTTGCTAA";                 // gene sequence sub_string is not multiple of 3
+        System.out.println("DNA strand is " + DNA);
+        sub_string = findSimpleGene(DNA);
+        if(sub_string.length() != 0){
+             System.out.println("Gene is : " + sub_string);
+        }
+        else{
+            System.out.println("Gene is : Invalid sequence");
+        }
+   
+    }
 }

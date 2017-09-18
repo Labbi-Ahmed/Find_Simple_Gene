@@ -26,7 +26,7 @@ public class FindAGeneSequence
     
     public void testSimpleGene(){
         String DNA , sub_string; 
-        DNA = "TAGCTATTCTGCCGAATC"; // gene sequence without ATG
+        DNA = "TAGCTATTCTGCCGAATC"; // gene sequence without ATG and TAA
         System.out.println("DNA strand is " + DNA);
         sub_string = findSimpleGene(DNA);
         if(sub_string.length() != 0){

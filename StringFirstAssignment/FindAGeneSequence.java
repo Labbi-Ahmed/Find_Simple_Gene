@@ -1,10 +1,4 @@
 
-/**
- * This class findout the invalid gene sequence from the given DNA
- *
- * @Labbi Ahemd
- * @version (a version number or a date)
- */
 import edu.duke.*;
 import java.util.*;
 public class FindAGeneSequence
